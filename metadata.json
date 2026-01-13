@@ -1,0 +1,5 @@
+{
+  "name": "CottonGuard - AI Disease Detection",
+  "description": "Professional Cotton Leaf Disease Detection application using ResNet50 and Hugging Face inference.",
+  "requestFramePermissions": []
+}
