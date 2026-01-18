@@ -36,7 +36,8 @@ CottonGuard/
 │   ├── ExamplesSection.tsx # Example images gallery
 │   ├── ModelInfo.tsx       # Model specifications and abstract
 │   └── Footer.tsx          # Footer with links
-├── assets/                 # Example leaf disease images
+├── public/                 # Public static assets
+│   └── images/             # Example leaf disease images
 ├── App.tsx                 # Main application component
 ├── index.tsx               # Application entry point
 ├── types.ts                # TypeScript type definitions
