@@ -128,18 +128,20 @@ function App() {
               darkMode={darkMode}
             />
             
-            <div className={`rounded-3xl p-8 shadow-md border hidden lg:block transition-colors duration-300 ${darkMode ? 'bg-slate-800 border-slate-700' : 'bg-white border-gray-100'}`}>
-              <h1 className={`text-2xl font-bold mb-6 text-center transition-colors duration-300 ${darkMode ? 'text-slate-100' : 'text-gray-800'}`}>Supported Disease Classes</h1>
-              <ul className={`grid grid-cols-1 sm:grid-cols-2 gap-4 text-base transition-colors duration-300 ${darkMode ? 'text-slate-300' : 'text-gray-600'}`}>
-                <li className="flex items-center gap-2"><span className="w-2 h-2 bg-brand-500 rounded-full"></span>Healthy Leaf</li>
-                <li className="flex items-center gap-2"><span className="w-2 h-2 bg-brand-500 rounded-full"></span>Bacterial Blight</li>
-                <li className="flex items-center gap-2"><span className="w-2 h-2 bg-brand-500 rounded-full"></span>Curl Virus</li>
-                <li className="flex items-center gap-2"><span className="w-2 h-2 bg-brand-500 rounded-full"></span>Herbicide Damage</li>
-                <li className="flex items-center gap-2"><span className="w-2 h-2 bg-brand-500 rounded-full"></span>Leaf Hopper Jassids</li>
-                <li className="flex items-center gap-2"><span className="w-2 h-2 bg-brand-500 rounded-full"></span>Leaf Reddening</li>
-                <li className="flex items-center gap-2"><span className="w-2 h-2 bg-brand-500 rounded-full"></span>Leaf Variegation</li>
-              </ul>
-            </div>
+            {result && (
+              <div className={`rounded-3xl p-8 shadow-md border transition-colors duration-300 hidden lg:block ${darkMode ? 'bg-slate-800 border-slate-700' : 'bg-white border-gray-100'}`}>
+                <h1 className={`text-2xl font-bold mb-6 text-center transition-colors duration-300 ${darkMode ? 'text-slate-100' : 'text-gray-800'}`}>Supported Disease Classes</h1>
+                <ul className={`grid grid-cols-1 sm:grid-cols-2 gap-4 text-base transition-colors duration-300 ${darkMode ? 'text-slate-300' : 'text-gray-600'}`}>
+                  <li className="flex items-center gap-2"><span className="w-2 h-2 bg-brand-500 rounded-full"></span>Healthy Leaf</li>
+                  <li className="flex items-center gap-2"><span className="w-2 h-2 bg-brand-500 rounded-full"></span>Bacterial Blight</li>
+                  <li className="flex items-center gap-2"><span className="w-2 h-2 bg-brand-500 rounded-full"></span>Curl Virus</li>
+                  <li className="flex items-center gap-2"><span className="w-2 h-2 bg-brand-500 rounded-full"></span>Herbicide Damage</li>
+                  <li className="flex items-center gap-2"><span className="w-2 h-2 bg-brand-500 rounded-full"></span>Leaf Hopper Jassids</li>
+                  <li className="flex items-center gap-2"><span className="w-2 h-2 bg-brand-500 rounded-full"></span>Leaf Reddening</li>
+                  <li className="flex items-center gap-2"><span className="w-2 h-2 bg-brand-500 rounded-full"></span>Leaf Variegation</li>
+                </ul>
+              </div>
+            )}
           </div>
 
           <div className="space-y-8">
@@ -154,9 +156,24 @@ function App() {
               <ResultsSection result={result} darkMode={darkMode} />
             ) : (
               !loading && (
-                <div className={`border-2 border-dashed rounded-3xl h-64 flex items-center justify-center transition-colors duration-300 ${darkMode ? 'bg-slate-800/50 border-slate-700 text-slate-500' : 'bg-white/50 border-gray-200 text-gray-400'}`}>
-                  <p>Results will appear here</p>
-                </div>
+                <>
+                  <div className={`border-2 border-dashed rounded-3xl h-64 flex items-center justify-center transition-colors duration-300 ${darkMode ? 'bg-slate-800/50 border-slate-700 text-slate-500' : 'bg-white/50 border-gray-200 text-gray-400'}`}>
+                    <p>Results will appear here</p>
+                  </div>
+                  
+                  <div className={`rounded-3xl p-8 shadow-md border transition-colors duration-300 ${darkMode ? 'bg-slate-800 border-slate-700' : 'bg-white border-gray-100'}`}>
+                    <h1 className={`text-2xl font-bold mb-6 text-center transition-colors duration-300 ${darkMode ? 'text-slate-100' : 'text-gray-800'}`}>Supported Disease Classes</h1>
+                    <ul className={`grid grid-cols-1 sm:grid-cols-2 gap-4 text-base transition-colors duration-300 ${darkMode ? 'text-slate-300' : 'text-gray-600'}`}>
+                      <li className="flex items-center gap-2"><span className="w-2 h-2 bg-brand-500 rounded-full"></span>Healthy Leaf</li>
+                      <li className="flex items-center gap-2"><span className="w-2 h-2 bg-brand-500 rounded-full"></span>Bacterial Blight</li>
+                      <li className="flex items-center gap-2"><span className="w-2 h-2 bg-brand-500 rounded-full"></span>Curl Virus</li>
+                      <li className="flex items-center gap-2"><span className="w-2 h-2 bg-brand-500 rounded-full"></span>Herbicide Damage</li>
+                      <li className="flex items-center gap-2"><span className="w-2 h-2 bg-brand-500 rounded-full"></span>Leaf Hopper Jassids</li>
+                      <li className="flex items-center gap-2"><span className="w-2 h-2 bg-brand-500 rounded-full"></span>Leaf Reddening</li>
+                      <li className="flex items-center gap-2"><span className="w-2 h-2 bg-brand-500 rounded-full"></span>Leaf Variegation</li>
+                    </ul>
+                  </div>
+                </>
               )
             )}
           </div>

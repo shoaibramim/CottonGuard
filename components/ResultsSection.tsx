@@ -79,7 +79,7 @@ const ResultsSection: React.FC<ResultsSectionProps> = ({ result, darkMode }) => 
           </div>
           
           <div className="mt-auto pt-5 border-t border-white/20 text-center text-xs text-brand-200">
-            Powered by ResNet50 Deep Learning Model • Validation Accuracy: ~98%
+            Powered by ResNet50 DL Model • Validation Accuracy: ~98%
           </div>
         </div>
       </div>
