@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Client } from '@gradio/client';
+import { Analytics } from '@vercel/analytics/react';
 import Header from './components/Header';
 import UploadSection from './components/UploadSection';
 import ResultsSection from './components/ResultsSection';
@@ -184,6 +185,7 @@ function App() {
       </main>
       
       <Footer darkMode={darkMode} />
+      <Analytics />
     </div>
   );
 }
